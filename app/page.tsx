@@ -41,17 +41,18 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-row w-full h-[85%] py-4">
-            <div className="bg-[#FFFFFF] border border-[#E3E8F0] rounded-lg shadow-md w-[74%] h-full">
+            <div className="bg-[#FFFFFF] border border-[#E3E8F0] rounded-lg shadow-md w-[74%] h-full p-4">
+              <h1 className="text-xl font-bold">Demostración:</h1>
               <InteractiveMenu />
             </div>
-            <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md ml-[1%] w-[25%] h-full p-2">
+            <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md ml-[1%] w-[25%] h-full p-4">
               <h1 className="text-xl font-bold">Significado:</h1>
             </div>
           </div>
         </div>
         <div className="bg-[#EAF2FF] border border-[#C7D7FF] w-full h-[15%] rounded-lg ml-auto flex flex-row">
             <Image src="/bombilla.jpeg" width={50} height={50} alt="bombilla"></Image>
-            <div></div>
+            <div className="text-[#4F7DF3]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia dolor vitae porro enim, autem harum fugiat voluptatum inventore illo, in culpa repellendus quaerat voluptates cumque ducimus ut adipisci iste! Debitis.</div>
         </div>
       </div>
     </div>

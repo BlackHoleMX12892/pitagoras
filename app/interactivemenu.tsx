@@ -17,7 +17,7 @@ export default function InteractiveMenu() {
         draw.rect('100%', '100%').fill(pattern);
         const circle = draw.circle(20).attr({ fill: '#4F7DF3' }).draggable()
         circle.animate(100).move(150, 150);
-        const line = draw.line(20, 100, 20, 150).draggable()
+        const line = draw.line(20, 100, 20, 300).draggable()
         line.stroke({ color: '#000', width: 5});
     }, []);
     return(
