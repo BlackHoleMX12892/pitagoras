@@ -42,11 +42,20 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full h-[85%] py-4">
             <div className="bg-[#FFFFFF] border border-[#E3E8F0] rounded-lg shadow-md w-[74%] h-full p-4">
-              <h1 className="text-xl font-bold">Demostración:</h1>
+              <h1 className="text-xl font-bold">Demostración</h1>
               <InteractiveMenu />
             </div>
             <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md ml-[1%] w-[25%] h-full p-4">
-              <h1 className="text-xl font-bold">Significado:</h1>
+              <h1 className="text-xl font-bold">Significado</h1>
+              <p>En un triángulo rectángulo:</p>
+              <div className="flex flex-row">
+                <div className="bg-[#34C759] rounded-[50%] w-4 h-4"></div>
+                <p><span className="text-[#4F7DF3]">a</span> y <span className="text-[#34C759]">b</span> son los catetos</p>
+              </div>
+              <div className="flex flex-row">
+                <div className="bg-[#8E6CF0] rounded-[50%] w-4 h-4"></div>
+                <p><span className="text-[#8E6CF0]">c</span> es la hipotenusa</p>
+              </div>
             </div>
           </div>
         </div>
