@@ -6,6 +6,14 @@ El fin de este proyecto es demostrar gráficamente el teorema.
 
 ## Getting Started
 
+Install dependencies:
+
+```bash
+npm i
+#or
+npm install
+```
+
 First, run the development server:
 
 ```bash
