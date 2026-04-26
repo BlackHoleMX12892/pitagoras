@@ -8,7 +8,7 @@ export default function InteractiveMenu() {
     const interactivemenu = useRef(null);
 
     useEffect(() => {
-        //@ts-expect-error it works
+        //@ts-expect-error It works and I'm okay with it not being a string.
         const draw = SVG().addTo(interactivemenu.current).size('100%', 300)
         const pattern = draw.pattern(20, 20, function(add) {
             add.rect(20, 20).fill('#fff');

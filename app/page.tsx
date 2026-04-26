@@ -1,6 +1,7 @@
 import { Comic_Relief } from "next/font/google";
 import Image from "next/image";
 import InteractiveMenu from "./interactivemenu";
+import { Navigation } from "react-feather"
 
 const comic_relief = Comic_Relief({
   weight: "700",
@@ -27,7 +28,7 @@ export default function Home() {
               <Image src="/pitagoras.jpg" width={50} height={50} alt="pitagoras" />
               <div className="flex flex-col ml-5 w-[70%]">
                 <h1 className={`text-4xl ${comic_relief.className}`}>Teorema de Pitágoras</h1>
-                <p>En un triángulo rectángulo, el cuadrado de la <span className="text-[#8E6CF0] font-bold">hipotenusa</span> es igual a la suma de los cuadrados de los catetos.</p>
+                <p className="text-[#6B7280]">En un triángulo rectángulo, el cuadrado de la <span className="text-[#8E6CF0] font-bold">hipotenusa</span> es igual a la suma de los cuadrados de los catetos.</p>
               </div>
             </div>
             <div className="bg-[#F3EEFF] border border-[#8E6CF0] w-[30%] h-full rounded-lg ml-auto flex flex-row p-2 items-center">
@@ -42,25 +43,30 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full h-[85%] py-4">
             <div className="bg-[#FFFFFF] border border-[#E3E8F0] rounded-lg shadow-md w-[74%] h-full p-4">
-              <h1 className="text-xl font-bold">Demostración</h1>
+              <div className="flex flex-row h-[10%]">
+                <Navigation className="text-[#4F7DF3] w-8 h-8" />
+                <div className="flex flex-col ml-2">
+                  <h1 className="text-xl font-bold text-[#1F2A44]">Demostración</h1>
+                  <p className="text-[#6B7280]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, mollitia?</p>
+                </div>
+              </div>
               <InteractiveMenu />
             </div>
             <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md ml-[1%] w-[25%] h-full p-4">
               <h1 className="text-xl font-bold">Significado</h1>
               <p>En un triángulo rectángulo:</p>
               <div className="flex flex-row">
-                <div className="bg-[#34C759] rounded-[50%] w-4 h-4"></div>
+                <div className="bg-[#34C759] rounded-[50%] w-3 h-3"></div>
                 <p><span className="text-[#4F7DF3]">a</span> y <span className="text-[#34C759]">b</span> son los catetos</p>
               </div>
               <div className="flex flex-row">
-                <div className="bg-[#8E6CF0] rounded-[50%] w-4 h-4"></div>
+                <div className="bg-[#8E6CF0] rounded-[50%] w-3 h-3"></div>
                 <p><span className="text-[#8E6CF0]">c</span> es la hipotenusa</p>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-[#EAF2FF] border border-[#C7D7FF] w-full h-[15%] rounded-lg ml-auto flex flex-row">
-            <Image src="/bombilla.jpeg" width={50} height={50} alt="bombilla"></Image>
             <div className="text-[#4F7DF3]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia dolor vitae porro enim, autem harum fugiat voluptatum inventore illo, in culpa repellendus quaerat voluptates cumque ducimus ut adipisci iste! Debitis.</div>
         </div>
       </div>
