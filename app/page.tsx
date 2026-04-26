@@ -43,9 +43,9 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full h-[85%] py-4">
             <div className="bg-[#FFFFFF] border border-[#E3E8F0] rounded-lg shadow-md w-[74%] h-full p-4">
-              <div className="flex flex-row h-[10%]">
-                <Navigation className="text-[#4F7DF3] w-8 h-8" />
-                <div className="flex flex-col ml-2">
+              <div className="flex flex-row h-[15%]">
+                <Navigation className="text-[#4F7DF3] w-8 h-8 ml-2 mt-2" />
+                <div className="flex flex-col ml-4">
                   <h1 className="text-xl font-bold text-[#1F2A44]">Demostración</h1>
                   <p className="text-[#6B7280]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, mollitia?</p>
                 </div>
@@ -54,14 +54,16 @@ export default function Home() {
             </div>
             <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md ml-[1%] w-[25%] h-full p-4">
               <h1 className="text-xl font-bold">Significado</h1>
-              <p>En un triángulo rectángulo:</p>
-              <div className="flex flex-row">
-                <div className="bg-[#34C759] rounded-[50%] w-3 h-3"></div>
-                <p><span className="text-[#4F7DF3]">a</span> y <span className="text-[#34C759]">b</span> son los catetos</p>
-              </div>
-              <div className="flex flex-row">
-                <div className="bg-[#8E6CF0] rounded-[50%] w-3 h-3"></div>
-                <p><span className="text-[#8E6CF0]">c</span> es la hipotenusa</p>
+              <div className="ml-2">
+                <p>En un triángulo rectángulo:</p>
+                <div className="flex flex-row">
+                  <div className="bg-[#34C759] rounded-[50%] w-3 h-3"></div>
+                  <p><span className="text-[#4F7DF3]">a</span> y <span className="text-[#34C759]">b</span> son los catetos</p>
+                </div>
+                <div className="flex flex-row">
+                  <div className="bg-[#8E6CF0] rounded-[50%] w-3 h-3"></div>
+                  <p><span className="text-[#8E6CF0]">c</span> es la hipotenusa</p>
+                </div>
               </div>
             </div>
           </div>

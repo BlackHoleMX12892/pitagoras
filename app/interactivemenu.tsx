@@ -9,7 +9,7 @@ export default function InteractiveMenu() {
 
     useEffect(() => {
         //@ts-expect-error It works and I'm okay with it not being a string.
-        const draw = SVG().addTo(interactivemenu.current).size('100%', 300)
+        const draw = SVG().addTo(interactivemenu.current).size('100%', '100%')
         const pattern = draw.pattern(20, 20, function(add) {
             add.rect(20, 20).fill('#fff');
             add.path('M 20 0 L 0 0 0 20').fill('none').stroke({ width: 0.5, color: '#ccc' });
@@ -29,6 +29,6 @@ export default function InteractiveMenu() {
         circle3.animate(100).move(250, 240);
     }, []);
     return(
-        <div ref={interactivemenu}></div>
+        <div ref={interactivemenu} className="w-full h-[85%]"></div>
     )
 }
