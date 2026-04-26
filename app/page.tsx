@@ -1,7 +1,7 @@
 import { Comic_Relief } from "next/font/google";
 import Image from "next/image";
 import InteractiveMenu from "./interactivemenu";
-import { Navigation } from "react-feather"
+import { Navigation, RotateCw } from "react-feather"
 
 const comic_relief = Comic_Relief({
   weight: "700",
@@ -53,7 +53,11 @@ export default function Home() {
               <InteractiveMenu />
               <div className="h-[25%] w-full pt-2 flex">
                 <div className="w-full h-[calc(100%-20px)] mt-5 bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md flex flex-row">
-                  <div className="w-[25%] h-[calc(100%+20px)] bg-[#FFF6DA] border border-[#FFD166] rounded-lg -translate-y-4.75 -translate-x-px"></div>
+                  <div className="w-[30%] h-[calc(100%+20px)] bg-[#FFF6DA] border border-[#FFD166] rounded-lg -translate-y-4.75 -translate-x-px"></div>
+                  <div className="w-[70%] h-full flex flex-row justify-center items-center space-x-[20%]">
+                    <div className="flex flex-row space-x-2 text-[#4F7DF3] bg-[#FFFFFF] border border-[#E3E8F0] rounded-md p-2 cursor-pointer hover:border-[#3B6AE0] active:border-[#2F55C7]"><RotateCw /> <span>Reiniciar</span></div>
+                    <div className="flex flex-row space-x-2 bg-[#FFFFFF] border border-[#E3E8F0] rounded-md p-2"><input type="checkbox" name="" id="" defaultChecked /><span>Mostrar cuadrados</span></div>
+                  </div>
                 </div>
               </div>
             </div>
