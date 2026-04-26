@@ -29,6 +29,6 @@ export default function InteractiveMenu() {
         circle3.animate(100).move(250, 240);
     }, []);
     return(
-        <div ref={interactivemenu} className="w-full h-[85%]"></div>
+        <div ref={interactivemenu} className="w-full h-[60%]"></div>
     )
 }

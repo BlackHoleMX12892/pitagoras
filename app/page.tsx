@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full h-[85%] py-4">
             <div className="bg-[#FFFFFF] border border-[#E3E8F0] rounded-lg shadow-md w-[74%] h-full p-4">
-              <div className="flex flex-row h-[15%]">
+              <div className="flex flex-row h-[15%] w-full">
                 <Navigation className="text-[#4F7DF3] w-8 h-8 ml-2 mt-2" />
                 <div className="flex flex-col ml-4">
                   <h1 className="text-xl font-bold text-[#1F2A44]">Demostración</h1>
@@ -51,6 +51,11 @@ export default function Home() {
                 </div>
               </div>
               <InteractiveMenu />
+              <div className="h-[25%] w-full pt-2 flex">
+                <div className="w-full h-[calc(100%-20px)] mt-5 bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md flex flex-row">
+                  <div className="w-[25%] h-[calc(100%+20px)] bg-[#FFF6DA] border border-[#FFD166] rounded-lg -translate-y-4.75 -translate-x-px"></div>
+                </div>
+              </div>
             </div>
             <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg shadow-md ml-[1%] w-[25%] h-full p-4">
               <h1 className="text-xl font-bold">Significado</h1>
@@ -69,7 +74,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-[#EAF2FF] border border-[#C7D7FF] w-full h-[15%] rounded-lg ml-auto flex flex-row">
-            <div className="text-[#4F7DF3]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia dolor vitae porro enim, autem harum fugiat voluptatum inventore illo, in culpa repellendus quaerat voluptates cumque ducimus ut adipisci iste! Debitis.</div>
+            <div className="text-[#4F7DF3]"></div>
         </div>
       </div>
     </div>
