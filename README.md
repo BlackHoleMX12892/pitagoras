@@ -1,6 +1,6 @@
 # Pitágoras
 
-Este es un proyecto Next.js, Tailwind, React y SVG.js para la enseñanza interactiva del teorema de pitágoras.
+Este es un proyecto Next.js, Tailwind, React, Feather Icons y SVG.js para la enseñanza interactiva del teorema de pitágoras.
 El proyecto se realizó exclusivamente con codigo escrito por mi, aunque herramientas de IA fueron utilizadas para generar la idea del diseño (imagen) y obtener información.
 El fin de este proyecto es demostrar gráficamente el teorema.
 
