@@ -1,7 +1,7 @@
 import { Comic_Relief } from "next/font/google";
 import Image from "next/image";
 import InteractiveMenu from "./interactivemenu";
-import { Navigation, RotateCw, AlertTriangle } from "react-feather"
+import { Navigation, RotateCw, AlertTriangle, ArrowRight } from "react-feather"
 import { reset } from "./interactivemenu";
 
 const comic_relief = Comic_Relief({
@@ -30,7 +30,7 @@ export default function Home() {
               <Image src="/pitagoras.jpg" width={50} height={50} alt="pitagoras" className="ml-3" />
               <div className="flex flex-col ml-7 w-[70%] h-full">
                 <h1 className={`text-3xl ${comic_relief.className}`}>Teorema de Pitágoras</h1>
-                <p className="text-[#6B7280] leading-5 mt-auto">En un triángulo rectángulo, el cuadrado de la <span className="text-[#8E6CF0] font-bold">hipotenusa</span> es igual a la suma de los cuadrados de los catetos.</p>
+                <p className="text-[#6B7280] mt-auto">En un triángulo rectángulo, el cuadrado de la <span className="text-[#8E6CF0] font-bold">hipotenusa</span> es igual a la suma de los cuadrados de los catetos.</p>
               </div>
             </div>
             <div className="bg-[#F3EEFF] border border-[#8E6CF0] w-[30%] h-full rounded-lg ml-auto flex flex-row p-2 items-center">
@@ -59,7 +59,7 @@ export default function Home() {
                     <AlertTriangle className="text-[#C9A227] w-20 h-20" />
                     <div className="flex flex-col ml-2">
                       <h3 className="font-bold text-[#C9A227]">Advertencia</h3>
-                      <p className="leading-5 text-sm">El ángulo debe medir exactamente 90°</p>
+                      <p className="text-sm">El ángulo debe medir exactamente 90°</p>
                     </div>
                   </div>
                   <div className="w-[70%] h-full flex flex-row justify-center items-center space-x-[20%]">
@@ -85,9 +85,17 @@ export default function Home() {
               <div className="w-full h-[70%] space-y-2">
                 <div className="w-full h-[calc(60%-4px)] bg-[#E6F9ED] border border-[#34C759] rounded-md p-2">
                   <h3 className="text-[#34C759] font-bold">Ejemplo:</h3>
+                  <div className="w-full h-full flex flex-col justify-center">
+                    <pre className="flex flex-row items-center"><span className="text-[#4F7DF3] font-bold">a</span> = 3<ArrowRight className="w-4 h-4 mx-2" /><span className="text-[#4F7DF3] font-bold">a<sup>2</sup></span> = 9</pre>
+                    <pre className="flex flex-row items-center"><span className="text-[#34C759] font-bold">b</span> = 4<ArrowRight className="w-4 h-4 mx-2" /><span className="text-[#34C759] font-bold">b<sup>2</sup></span> = 16</pre>
+                    <pre className="flex flex-row items-center"><span className="text-[#8E6CF0] font-bold">c</span> = 5<ArrowRight className="w-4 h-4 mx-2" /><span className="text-[#8E6CF0] font-bold">c<sup>2</sup></span> = 25</pre>
+                    <hr className="h-1 border-[#6B7280]" />
+                    <pre className="flex flex-row items-center"><span className="text-[#8E6CF0] font-bold">25</span> = <span className="text-[#4F7DF3] font-bold">9</span> + <span className="text-[#34C759] font-bold">16</span></pre>
+                  </div>
                 </div>
                 <div className="w-full h-[calc(40%-4px)] bg-[#F3EEFF] border border-[#8E6CF0] rounded-md p-2">
                   <h3 className="text-[#8E6CF0] font-bold">Recordatorio</h3>
+                  <p className="text-[#6B7280]">Si un número esta al cuadrado, lo multiplicamos por si mismo.</p>
                 </div>
               </div>
             </div>
