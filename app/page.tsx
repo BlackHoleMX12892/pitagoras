@@ -102,7 +102,13 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-[#EAF2FF] border border-[#C7D7FF] w-full h-[15%] rounded-lg ml-auto flex flex-row">
-            <div className="text-[#4F7DF3]"></div>
+            <div className="text-[#4F7DF3] p-4 flex flex-row">
+              <Image src="/papel.jpg" width={60} height={60} alt="trofeo" className="rounded-[50%]"></Image>
+              <div className="flex flex-col">
+                <h3 className="text-xl font-bold">Actividad:</h3>
+                <p>Intenta crear triángulos que cumplan el teorema utilizando el material proporcionado.</p>
+              </div>
+            </div>
         </div>
       </div>
     </div>
