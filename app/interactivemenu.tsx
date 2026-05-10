@@ -8,6 +8,23 @@ import "@svgdotjs/svg.panzoom.js"
 const draw = SVG()
 let canvas: Svg | null = null;
 
+let a: number;
+let b: number;
+let c: number;
+
+a = 150;
+
+b = 100;
+
+let asquared = a * a;
+let bsquared = b * b;
+let csquared = asquared + bsquared;
+
+c = Math.sqrt(csquared);
+
+let inclination = Math.asin(a / c) * (180 / Math.PI);
+
+
 function render() {
     if (canvas) {
         canvas.viewbox(0, 0, 1100, 400)
@@ -17,27 +34,26 @@ function render() {
         add.path('M 20 0 L 0 0 0 20')
             .fill('none')
             .stroke({ color: '#ddd', width: 1 });
-    });
-    draw.rect('100%', '100%').fill(pattern);
-    const square = draw.group()
-    square.rect(140, 140).fill('#F3EEFF').rotate(45).stroke({ color: '#8E6CF0', width: 1})
-    square.text('c²').move(50, 72).fill('#8E6CF0').font({ size: 60, family: 'Helvetica'})
-    square.move(0, 0)
-    const square2 = draw.group()
-    square2.rect(100, 100).fill('#E6F9ED').stroke({ color: '#34C759', width: 1 })
-    square2.text('b²').move(35, 47).fill('#34C759').font({ size: 40, family: 'Helvetica'})
-    square2.move(0, 200)
-    const square3 = draw.group()
-    square3.rect(100, 100).fill('#EAF2FF').stroke({ color: '#4F7DF3', width: 1 })
-    square3.text('a²').move(35, 47).fill('#4F7DF3').font({ size: 40, family: 'Helvetica'})
-    square3.move(-100, 100)
-    const triangle = draw.group()
-    triangle.polygon('0,100 0,0 100,100').fill('#F3EEFF')
-    triangle.path('M 20 100 L 20 80 0 80').fill('none').stroke({ color: '#6B7280', width: 1 })
-    triangle.circle(10).fill('#4F7DF3').move(-5, 95).draggable()
-    triangle.circle(10).fill('#4F7DF3').move(-5, -5).draggable()
-    triangle.circle(10).fill('#4F7DF3').move(95, 95).draggable()
-    triangle.move(0, 100)
+    })
+    draw.rect('100%', '100%').fill(pattern)
+    const triangle = draw.group();
+    triangle.polygon([a, 0, (a + b), a, a, a]).fill('#F3EEFF').stroke({ color: '#8E6CF0', width: 1})
+    triangle.polygon([0, 0, 0, a, a, a, a, 0]).fill('#EAF2FF').stroke({ color: '#4F7DF3', width: 1 })
+    triangle.polygon([a, a, a, (a + b), (a + b), (a + b), (a + b), a]).fill('#E6F9ED').stroke({ color: '#34C759', width: 1 })
+    const circle1 = triangle.circle(10).move((a - 5), - 5).fill('#4F7DF3').draggable().on('dragmove.namespace', (e) => {
+        const { handler, box } = e.detail
+        e.preventDefault()
+
+        handler.move(circle1.x(), box.y - (box.y % 20))
+    })
+    const circle2 = triangle.circle(10).move(((a + b) - 5), (a - 5)).fill('#4F7DF3').draggable().on('dragmove.namespace', (e) => {
+        const { handler, box } = e.detail
+        e.preventDefault()
+
+        handler.move(box.x - (box.x % 20), circle2.y())
+    })
+    triangle.move(20, 100)
+    draw.rect(c, c).move(700, 100).rotate(inclination).fill('#F3EEFF').stroke({ color: '#8E6CF0', width: 1}).draggable()
 }
 
 function clean() {
