@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="bg-[#F5F7FB] w-full h-screen flex flex-row p-4">
       <div className="bg-[#FFFFFF] flex flex-col w-[20%] h-full border border-[#E3E8F0] rounded-lg shadow-md p-4 space-y-2">
-        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full">Teorema de Pitágoras</div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
         <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
         <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
         <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
@@ -107,7 +107,7 @@ export default function Home() {
               <Image src="/papel.jpg" width={60} height={60} alt="trofeo" className="rounded-md border-2 border-[#C7D7FF]"></Image>
               <div className="flex flex-col">
                 <h3 className="text-xl font-bold">Actividad:</h3>
-                <p>Intenta crear triángulos que cumplan el teorema utilizando el material proporcionado.</p>
+                <p>Intenta formar los cuadrados utilizando el material proporcionado.</p>
               </div>
             </div>
         </div>
