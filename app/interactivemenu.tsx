@@ -100,6 +100,27 @@ function render() {
         clean()
         render()
     })
+    triangle.circle(10).move((a - 5), (a - 5)).fill('#4F7DF3').draggable().on('dragmove.namespace', (e) => {
+        //@ts-expect-error I don't understand events sorry
+        const { handler, box } = e.detail
+        e.preventDefault()
+
+        handler.move(box.x - (box.x % 20), box.y - (box.y % 20))
+
+        const x = box.x - (box.x % 20)
+        const y = box.y - (box.y % 20)
+
+        if (x > lastX) b -= 20
+        if (x < lastX) b += 20
+        if (y > lastY) a += 20
+        if (y < lastY) a -= 20
+
+        lastX = x
+        lastY = y
+        calcC()
+        clean()
+        render()
+    })
     triangle.move(20, 100)
     const cSquare = draw.group()
     cSquare.rect(c, c).rotate(inclination).fill('#F3EEFF').stroke({ color: '#8E6CF0', width: 1})
