@@ -3,6 +3,7 @@ import Image from "next/image";
 import InteractiveMenu from "./interactivemenu";
 import { Navigation, RotateCw, AlertTriangle, ArrowRight } from "react-feather"
 import { reset } from "./interactivemenu";
+import Checkbox from "./checkbox";
 
 const comic_relief = Comic_Relief({
   weight: "700",
@@ -14,14 +15,14 @@ export default function Home() {
 
   return (
     <div className="bg-[#F5F7FB] w-full h-screen flex flex-row p-4">
-      <div className="bg-[#FFFFFF] flex flex-col w-[20%] h-full border border-[#E3E8F0] rounded-lg shadow-md">
-        <div className="bg-[#8E6CF0] w-full h-full rounded-md"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div className="bg-[#FFFFFF] flex flex-col w-[20%] h-full border border-[#E3E8F0] rounded-lg shadow-md p-4 space-y-2">
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full">Teorema de Pitágoras</div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
+        <div className="bg-[#F5F7FB] border border-[#E3E8F0] rounded-lg w-full h-full"></div>
       </div>
       <div className="bg-[#FFFFFF] flex flex-col w-[88%] ml-[2%] h-full border border-[#E3E8F0] rounded-lg shadow-md p-4">
         <div className="w-full h-[85%] flex flex-col px-4">
@@ -64,7 +65,7 @@ export default function Home() {
                   </div>
                   <div className="w-[70%] h-full flex flex-row justify-center items-center space-x-[20%]">
                     <div onClick={reset} className="flex flex-row space-x-2 text-[#4F7DF3] bg-[#FFFFFF] border border-[#E3E8F0] rounded-md p-2 cursor-pointer hover:border-[#3B6AE0] active:border-[#2F55C7]"><RotateCw /> <span>Reiniciar</span></div>
-                    <div className="flex flex-row space-x-2 bg-[#FFFFFF] border border-[#E3E8F0] rounded-md p-2"><input type="checkbox" name="" id="" defaultChecked /><span className="text-[#1F2A44]">Mostrar cuadrados</span></div>
+                    <div className="flex flex-row space-x-2 bg-[#FFFFFF] border border-[#E3E8F0] rounded-md p-2"><Checkbox /><span className="text-[#1F2A44]">Mostrar cuadrados</span></div>
                   </div>
                 </div>
               </div>
